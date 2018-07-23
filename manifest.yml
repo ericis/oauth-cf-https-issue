@@ -1,0 +1,10 @@
+applications:
+- buildpack: java_buildpack
+  instances: 1
+  memory: 512M
+  disk_quota: 512M
+  timeout: 180
+  path: build/libs/oauth-cf-https-0.0.1-SNAPSHOT.jar
+  env:
+    SPRING_PROFILES_ACTIVE: cloud
+    JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
