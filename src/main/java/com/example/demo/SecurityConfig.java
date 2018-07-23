@@ -26,7 +26,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		
 		if (this.isHttpsEnabled) {
 			log.info("HTTPS required");
-			http.requiresChannel().anyRequest().requiresSecure();	
+			http.requiresChannel().anyRequest().requiresSecure().antMatchers("/login*", "/perform_login");
 		} else {
 			log.info("HTTPS not required");
 		}
