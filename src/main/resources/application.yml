@@ -1,14 +1,11 @@
 spring:
   security:
-    user:
-      name: usr
-      password: pwd
     oauth2:
       client:
         registration:
           github:
             clientId: abc
-            clientSecret: xyz
+            clientSecret: 123
 
 my:
   https:
